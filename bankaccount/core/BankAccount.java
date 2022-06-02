@@ -1,12 +1,12 @@
 package bankaccount.core;
 
-
-
 public class BankAccount {
     
         public String accountName;
         public String accountNumber;
-        public float accountBalance;
+        public float initialBalance;
+        public float newBalance;
+        public float deposit;
         public String [] transactions;
         public Boolean isClosed;
         public long creatingDate;
@@ -27,33 +27,32 @@ public class BankAccount {
         }
 
         public float setaccountBalance (float b){
-            return this.accountBalance = b;
+            return this.initialBalance = b;
            
         }
 
         public float getaccountBalance () {
-            return this.accountBalance;
+            return this.initialBalance;
         }
 
         public float setaccountBalanceIn (float moneyIn){ 
-            if(moneyIn < 0)
-            System.out.println("not valid");
-            else 
-            return this.accountBalance = this.accountBalance + moneyIn;
+            this.newBalance = this.initialBalance + moneyIn;
+            return moneyIn = this.deposit;
         }
 
-        public float getaccountBalanceIn (float moneyIn) {
-            return moneyIn; 
+        public float getaccountBalanceIn () {
+            return this.deposit; 
         }
 
         public float setaccountBalanceOut (float moneyOut){
-            return 
-            this.accountBalance = this.accountBalance - moneyOut;
+            return moneyOut;
+            // this.newBalance = this.initialBalance - moneyOut;
         }
 
         public float getaccountBalanceOut (float moneyOut){
-            return 
-            this.accountBalance = this.accountBalance - moneyOut;
+            return moneyOut;
+            // this.newBalance = this.initialBalance + moneyOut;
+            // return this.newBalance - this.initialBalance ; 
         }
 
         // public String setTransactionIn (String receive) {
